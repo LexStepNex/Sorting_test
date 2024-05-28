@@ -20,7 +20,6 @@ void quickSort(int* arr, int left, int right) {
       r--;
     }
   }
-
   quickSort(arr, left, r);
   quickSort(arr, l, right);
 }
@@ -32,12 +31,12 @@ int main() {
   int n = std::size(arr);
 
   std::cout << "Ввод: \n";
-  for (int i = 0; i < std::size(arr); i++) {
-    std::cout << arr[i] << (i == (std::size(arr) - 1) ? " \n" : ", ");
+  for (int i = 0; i < n; i++) {
+    std::cout << arr[i] << (i == (n - 1) ? " \n" : ", ");
   }
 
   quickSort(arr, 0, n - 1);
-
+  std::cout << "Вывод: \n";
   printArray(arr, n);
   
 }
